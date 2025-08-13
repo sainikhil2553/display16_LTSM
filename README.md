@@ -5,6 +5,7 @@
 ## Table of contents
 
   * [Overview](#overview)
+  * [Installation](#installation)
   * [Documentation](#documentation)
     * [Supported devices](#supported-devices)
     * [API documentation](#api-documentation)
@@ -25,7 +26,7 @@
 
 0. C++ Library to support 16-bit color graphic displays
 1. Graphics class included.
-2. Bitmaps supported: 1, 8, and 16 bit. + sprites.
+2. Bitmaps supported: 1, 8, and 16 bit + sprites.
 3. Multiple displays supported, see supported-devices, new components can be easily added.
     Display driver are separate libraries that import this one.
 4. 16 fonts included, new fonts can be easily added without changing source code
@@ -33,9 +34,16 @@
 
 * Author: Gavin Lyons
 
+
+## Installation
+
+The library is included in the official Arduino library manger and the optimum way to install it is using the library manager which can be opened by the *manage libraries* option in Arduino IDE. 
+
 ## Documentation
 
 ### Supported devices
+
+Component drivers are separate dependent downstream libraries that include this library.
 
 | Component name | Type | Interface | Readme URL link |
 | -------- | ---------- | --------- | ---------- |
@@ -51,7 +59,7 @@ Code is commented for doxygen API documentation software.
 
 ### Fonts
 
-The font system readme is in the 'doc' folder [at link.](extra/doc/fonts/README.md)
+The font system readme is in the 'doc' folder [at link.](extras/doc/fonts/README.md)
 
 ## Software
 
@@ -71,7 +79,7 @@ may not work fully or even compile.
 ### Advanced buffer mode
 
 Advanced buffer mode. There is advanced buffer mode where the code writes to a global screen buffer instead of the VRAM of display. It is **OFF** by default more details at readme, 
-which is in the 'doc' folder [at link.](extra/doc/buffer_mode/README.md)
+which is in the 'doc' folder [at link.](extras/doc/buffer_mode/README.md)
 **This mode is only for high RAM MCUs.**
 
 ### Debug Mode 
@@ -86,7 +94,7 @@ comment in define dislib16 DEBUG MODE ENABLE in file display16 common LTSM.hpp.
 
 File system Hierarchy:
 
-TODO. 
+[![ pic ](https://github.com/gavinlyonsrepo/ST7735_LTSM/blob/main/extras/images/filesystem.jpg)](https://github.com/gavinlyonsrepo/ST7735_LTSM/blob/main/extras/images/filesystem.jpg) 
 
 ### Error Codes 
 

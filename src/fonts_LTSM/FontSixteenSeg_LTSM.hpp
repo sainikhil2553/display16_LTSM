@@ -1,5 +1,5 @@
 /*!
-	@file    FontSixteenSeg.hpp
+	@file    FontSixteenSeg_LTSM.hpp
 	@author  Gavin Lyons
 	@brief   Library font file for SixteenSeg font.
 	@note    For font , total characters value = (ASCII offset - ASCII last character)

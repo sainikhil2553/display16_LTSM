@@ -16,11 +16,11 @@ display16_graphics_LTSM::display16_graphics_LTSM() {}
 	@param x  Column co-ord
 	@param y  row co-ord
 	@param color 565 16-bit
-	@note   By default uses spiWriteDataBuffer method to write each row as a buffer for speed.
+	@details  By default uses spiWriteDataBuffer method to write each row as a buffer for speed.
 			Much faster than pixel by pixel spi byte writes
 			If dislib16_ADVANCED_SCREEN_BUFFER_ENABLE is defined then the function 
 			will use the screen buffer to draw the pixel into VRAM.
-	@return Will return early if x or y are out of bounds.
+			Will return early if x or y are out of bounds.
 */
 void display16_graphics_LTSM ::drawPixel(uint16_t x, uint16_t y, uint16_t color)
 {

@@ -15,7 +15,7 @@ display_Fonts::display_Fonts(){setFont(FontDefault); };
 
 /*!
 	@brief SetFont 
-	@param FontChoice SelectedFontName Select this font, pass the font name
+	@param font Selected Font Name,  pass the font name
 	@return	Will return rdlib::Return_Codes_e  enum
 		-# Pass rdlib::Success
 		-# Error 1 rdlib::FontPtrNullptr
