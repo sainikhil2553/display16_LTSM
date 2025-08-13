@@ -16,8 +16,8 @@ Size of buffer required.
 | 240x320| 153,600|
 
 Whether your MCU can use this mode 
-will depend on size of display and you available heap SRAM memory of your MCU
-This table (AI generated) give some indication. Some examples of SRAM usage for selected display sizes.
+will depend on size of display and the available heap SRAM memory of your MCU + program
+This table (figures are approximations) give some indication. Some examples of SRAM usage for selected display sizes.
 
 | MCU | Total SRAM | Usable for Framebuffer (safe) | Max Resol (safe) |
 |------------|------|---------|------------|

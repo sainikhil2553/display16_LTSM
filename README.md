@@ -73,7 +73,7 @@ arcs, ellipses and lines at an angle.
 It is **OFF** by default.
 If you want these 'advanced' functions, simply 
 comment in define dislib16 ADVANCED GRAPHICS ENABLE in display16 common LTSM.hpp. 
-This will disable advanced graphics mode. If this is disabled some examples and demos 
+This will enable advanced graphics mode. If this is disabled some examples 
 may not work fully or even compile. 
 
 ### Advanced buffer mode
@@ -94,11 +94,12 @@ comment in define dislib16 DEBUG MODE ENABLE in file display16 common LTSM.hpp.
 
 File system Hierarchy:
 
-[![ pic ](https://github.com/gavinlyonsrepo/ST7735_LTSM/blob/main/extras/images/filesystem.jpg)](https://github.com/gavinlyonsrepo/ST7735_LTSM/blob/main/extras/images/filesystem.jpg) 
+[![ pic ](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg)](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg) 
 
 ### Error Codes 
 
 Most functions that return a value, return a enum. 
 Zero for success and a positive number for an error code. 
+The enum is in file: display16 common LTSM.hpp.
 
 ## Notes
