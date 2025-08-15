@@ -1,5 +1,18 @@
 # Fonts Readme
 
+## Table of contents
+
+
+	* [Overview](#overview)  
+	* [Drawing method](#drawing-method)  
+	* [Font data table](#font-data-table)  
+	* [Adding a font](#adding-a-font)  
+	* [Sources](#sources)  
+	* [Font Images](#font-images)
+
+
+## Overview
+
 There are 16 fonts packaged with library. Fonts can be added or removed by user.
 All the Font data is in folder 'fonts_LTSM' but user can store custom fonts where they want.
 Wanted fonts are included in the ino file. Unwanted fonts are not included and do not

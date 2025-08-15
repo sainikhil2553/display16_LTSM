@@ -24,11 +24,12 @@
 * Title : Graphics Library for 16-bit color graphic displays for Arduino eco-system.
 * Description :
 
-0. C++ Library to support 16-bit color graphic displays
+0. C++ Library to support 16-bit color graphic displays.
 1. Graphics class included.
 2. Bitmaps supported: 1, 8, and 16 bit + sprites.
-3. Multiple displays supported, see supported-devices, new components can be easily added.
-    Display driver are separate libraries that import this one.
+3. Multiple displays supported, see supported-devices, new components can be added.
+    Device display driver are separate libraries that import this one.
+    User can write their own if device not supported.
 4. 16 fonts included, new fonts can be easily added without changing source code
 5. [URL project github link](https://github.com/gavinlyonsrepo/display16_LTSM)
 
