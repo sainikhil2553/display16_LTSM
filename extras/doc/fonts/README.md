@@ -2,14 +2,12 @@
 
 ## Table of contents
 
-
-	* [Overview](#overview)  
-	* [Drawing method](#drawing-method)  
-	* [Font data table](#font-data-table)  
-	* [Adding a font](#adding-a-font)  
-	* [Sources](#sources)  
-	* [Font Images](#font-images)
-
+* [Overview](#overview)  
+* [Drawing method](#drawing-method)  
+* [Font data table](#font-data-table)  
+* [Adding a font](#adding-a-font)  
+* [Sources](#sources)  
+* [Font Images](#font-images)
 
 ## Overview
 

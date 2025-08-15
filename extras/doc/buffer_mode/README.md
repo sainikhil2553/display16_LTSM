@@ -2,12 +2,11 @@
 
 ## Table of contents
 
-	* [Overview](#overview)  
-	* [Enabling Advanced Buffer Mode](#enabling-advanced-buffer-mode)  
-	* [Usage](#usage)  
-	* [Functions](#functions)  
-	* [Examples](#examples)
-
+* [Overview](#overview)  
+* [Enable](#enable)  
+* [Usage](#usage)  
+* [Functions](#functions)  
+* [Examples](#examples)
 
 ## Overview
 
@@ -47,7 +46,7 @@ Even MCUs with high total RAM may fail to run this mode if other parts of your c
 reserve significant memory. Support for 'std::vector' is also required by MCU compiler.
 
 
-## Enabling Advanced Buffer Mode
+## Enable
 
 To enable advanced buffer mode, you need to define the macro `dislib16_ADVANCED_SCREEN_BUFFER_ENABLE`. 
 This macro is located in the file `display16_common_LTSM.hpp` (USER OPTION 2). 
