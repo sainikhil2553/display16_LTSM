@@ -6,11 +6,11 @@
 
   * [Overview](#overview)
   * [Installation](#installation)
-  * [Documentation](#documentation)
-    * [Supported devices](#supported-devices)
+  * [Supported devices](#supported-devices)
+  * [Software](#software)
     * [API documentation](#api-documentation)
     * [Fonts](#fonts)
-  * [Software](#software)
+    * [Bitmaps](#bitmaps)
     * [Advanced Graphics](#advanced-graphics)
     * [Advanced buffer mode](#Advanced-buffer-mode)
     * [Debug mode](#debug-mode)
@@ -40,9 +40,7 @@
 
 The library is included in the official Arduino library manger and the optimum way to install it is using the library manager which can be opened by the *manage libraries* option in Arduino IDE. 
 
-## Documentation
-
-### Supported devices
+## Supported devices
 
 Component drivers are separate dependent downstream libraries that include this library.
 
@@ -54,6 +52,8 @@ Component drivers are separate dependent downstream libraries that include this 
 | ILI9341 | TFT LCD |SPI HW & SW  | [github link](https://github.com/gavinlyonsrepo/ILI9341_LTSM)|
 | GC9A01 | TFT LCD |SPI HW & SW  | [github link](https://github.com/gavinlyonsrepo/GC9A01_LTSM)|
 
+## Software
+
 ### API Documentation
 
 Code is commented for doxygen API documentation software.
@@ -62,7 +62,20 @@ Code is commented for doxygen API documentation software.
 
 The font system readme is in the 'doc' folder [at link.](extras/doc/fonts/README.md)
 
-## Software
+### Bitmap
+
+Functions to support drawing bitmaps & sprites.
+
+| Num | Function Name | Colour support | bitmap size max (128X128 screen) |  Note |
+| ------ | ------ | ------ | ------ | ------ |
+| 1 | drawBitmap | bi-colour | 2048 bytes  | Data horizontally addressed |
+| 2 | drawBitmap8Data | 8 bit color RRRGGGBB  | 16384  | Data from array, Converted by software to 16-bit color |
+| 3 | drawBitmap16Data | 16 bit color 565  | 32768  | Data from array |
+| 4 | drawSpriteData  | 16 bit color  565 | 32768  | Data from array , Draws background color transparent | 
+
+1. Bitmap size in kiloBytes = (screenWidth * screenHeight * bitsPerPixel)/(1024 * 8)
+2. The data array for 1 is created from image files using file data conversion tool [link](https://javl.github.io/image2cpp/)
+3. The data array for 2-4  is created from BMP files using file data conversion tool [link](https://notisrac.github.io/FileToCArray/)
 
 ### Advanced Graphics
 
