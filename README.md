@@ -62,7 +62,7 @@ Code is commented for doxygen API documentation software.
 
 The font system readme is in the 'doc' folder [at link.](extras/doc/fonts/README.md)
 
-### Bitmap
+### Bitmaps
 
 Functions to support drawing bitmaps & sprites.
 
@@ -76,6 +76,9 @@ Functions to support drawing bitmaps & sprites.
 1. Bitmap size in kiloBytes = (screenWidth * screenHeight * bitsPerPixel)/(1024 * 8)
 2. The data array for 1 is created from image files using file data conversion tool [link](https://javl.github.io/image2cpp/)
 3. The data array for 2-4  is created from BMP files using file data conversion tool [link](https://notisrac.github.io/FileToCArray/)
+4. 8-bit bitmaps only take half the memory of 16-bit bitmaps, at the expense of color depth:
+   256 colors vs 65,536 colors.
+
 
 ### Advanced Graphics
 
@@ -88,7 +91,7 @@ It is **OFF** by default.
 If you want these 'advanced' functions, simply 
 comment in define dislib16 ADVANCED GRAPHICS ENABLE in display16 common LTSM.hpp. 
 This will enable advanced graphics mode. If this is disabled some examples 
-may not work fully or even compile. 
+may not work fully or even compile.
 
 ### Advanced buffer mode
 
@@ -110,10 +113,10 @@ File system Hierarchy:
 
 [![ pic ](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg)](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg) 
 
-### Error Codes 
+### Error Codes
 
-Most functions that return a value, return a enum. 
-Zero for success and a positive number for an error code. 
+Most functions that return a value, return a enum.
+Zero for success and a positive number for an error code.
 The enum is in file: display16 common LTSM.hpp.
 
 ## Notes

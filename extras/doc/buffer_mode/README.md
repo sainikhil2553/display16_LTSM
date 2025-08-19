@@ -60,6 +60,8 @@ writing directly to the display VRAM.
 2. destroyBuffer, destroys buffer de-allocates memory, call at end of Display operations.
 3. clearBuffer, fills buffer with a colour, by default black.
 4. writeBuffer, writes buffer in a single SPI buffered write to screen.
+By default this will use a single write but there is also a row by row
+buffered write option, if passed parameter, certain displays require this option.
 
 ## Functions
 
